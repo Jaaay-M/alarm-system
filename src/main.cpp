@@ -36,7 +36,7 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
 
-  // Reads the echoPin, with a 30 ms timeout
+  // Reads the echoPin, with a 30 milliseconds timeout
   duration = pulseIn(echoPin, HIGH, 30000);
 
   // If no echo was received, don't calculate a false distance
