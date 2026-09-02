@@ -1,4 +1,8 @@
 #include <Arduino.h>
+#include <BluetoothSerial.h>
+
+#include "hidden.h"
+#include "bluetooth.h"
 
 // ESP32 GPIO pins for the HC-SR04 ultrasonic sensor
 #define echoPin 26
@@ -14,6 +18,9 @@ float distance;
 void setup() {
   // Opens port 9600 for serial communication
   Serial.begin(9600);
+
+  // Function to set up Bluetooth connection
+  void setupBluetooth();
 
   // Sets the HC-SR04 pins
   pinMode(trigPin, OUTPUT);
