@@ -2,5 +2,6 @@
 #define BLUETOOTH_H
 
 void setupBluetooth();
+void updatesBluetooth();
 
 #endif

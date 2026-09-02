@@ -3,6 +3,7 @@
 #include <BluetoothSerial.h>
 
 #include "hidden.h"
+#include "main.cpp"
 
 BluetoothSerial SerialBT;
 
@@ -29,5 +30,17 @@ void setupBluetooth() {
 
 void updatesBluetooth() {
     if (SerialBT.connected()) {
+        JsonDocument doc;
+
+        if (distance > 5) {
+            doc["Triggered"] = true;
+        } else {
+            doc["Triggered"] = false;
+        }
+
+        String jsonString;
+        serializeJson(doc, jsonString);
+
+        Serial.println("Sending JSON: " + jsonString);
     }
 }
