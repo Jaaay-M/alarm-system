@@ -4,6 +4,7 @@
 #include <AsyncTCP.h>
 #include <LittleFS.h>
 #include "hidden.h"
+#include "api.h"
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -47,8 +48,8 @@ void setup() {
   });
 
   server.begin();
+  setupAPI(server);
   Serial.println("HTTP server started");
-
 }
 
 void loop() {
