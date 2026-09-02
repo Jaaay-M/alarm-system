@@ -3,8 +3,10 @@
 #include <ESPAsyncWebServer.h>
 #include <AsyncTCP.h>
 #include <LittleFS.h>
+
 #include "hidden.h"
 #include "api.h"
+#include "alarm.h"
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -41,6 +43,8 @@ void setup() {
   Serial.println("Connected to WiFi");
   Serial.print("IP Address: ");
   Serial.println(WiFi.localIP());
+
+  setupBluetooth();
   
   // Serve the index.html file when accessing the root URL
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -53,5 +57,6 @@ void setup() {
 }
 
 void loop() {
+  handleBluetooth();
   // Nothing to do here, everything is handled asynchronously
 }
