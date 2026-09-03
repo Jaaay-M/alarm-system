@@ -23,4 +23,4 @@ when they away from the alarm itself.
 - Real-time status updates
 
 ## Wire Diagram
-![Wire Diagram](docs/images/wire-diagram.jpg)
+![Wire Diagram](docs/images/wire-diagram.JPG)
