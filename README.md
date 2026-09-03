@@ -22,4 +22,5 @@ when they away from the alarm itself.
 - JSON-based system for status updates
 - Real-time status updates
 
-
+## Wire Diagram
+![Wire Diagram](docs/images/wire-diagram.jpg)
