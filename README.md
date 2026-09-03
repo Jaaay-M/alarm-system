@@ -16,3 +16,10 @@ when they away from the alarm itself.
 - Breadboard
 
 ## Features
+- ESP32 Bluetooth Communication
+- HC-SR04 Ultrasonic distance detection
+- Web-based monitoring dashboard
+- JSON-based system for status updates
+- Real-time status updates
+
+
