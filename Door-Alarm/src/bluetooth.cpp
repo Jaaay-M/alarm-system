@@ -2,8 +2,9 @@
 #include <ArduinoJson.h>
 #include <BluetoothSerial.h>
 
-#include "hidden.h"
-#include "main.cpp"
+#include "secret.h"
+#include "variables.h"
+
 
 BluetoothSerial SerialBT;
 
