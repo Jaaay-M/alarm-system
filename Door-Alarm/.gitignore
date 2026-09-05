@@ -4,3 +4,4 @@
 .vscode/launch.json
 .vscode/ipch
 include/hidden.h
+src/hidden.cpp

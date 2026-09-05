@@ -1,14 +1,19 @@
 #include <Arduino.h>
 
 #include "motionSensor.h"
+#include "variables.h"
 
-// ESP32 GPIO pins for the HC-SR04 ultrasonic sensor
-#define echoPin 26
-#define trigPin 27
+void setupMotionSensor() {
+    // Sets the HC-SR04 pins
+    pinMode(trigPin, OUTPUT);
+    pinMode(echoPin, INPUT);
 
-// Variables for the ultrasonic sensor
-long duration;
-float distance;
+    // Sets the buzzer pin as an OUTPUT
+    pinMode(buzzer, OUTPUT);
+
+    // Make sure the buzzer starts off
+    noTone(buzzer);
+}
 
 void motionSensorPulse() {
     // Clears the trigPin
@@ -35,5 +40,18 @@ void motionSensorPulse() {
 
     // Print the distance on the Serial Monitor
     Serial.println("Distance: " + String(distance) + " cm");
+
+    // If the distance is greater than 10 cm, sound the buzzer
+    if (distance > 5) {
+        tone(buzzer, 1000);
+        delay(500);
+        tone(buzzer, 750);
+        delay(500);
+        void updatesBluetooth();
+    } else {
+        noTone(buzzer);
+        delay(100);
+        void updatesBluetooth();
+    }
 
 }

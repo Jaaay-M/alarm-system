@@ -3,13 +3,11 @@
 #include <BluetoothSerial.h>
 
 #include "hidden.h"
-#include "main.cpp"
+#include "variables.h"
 
 BluetoothSerial SerialBT;
 
 void setupBluetooth() {
-    Serial.begin(9600);
-
     Serial.println("Starting Bluetooth...");
 
     SerialBT.begin("Alarm", true);
