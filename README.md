@@ -11,7 +11,9 @@ when they away from the alarm itself.
 - 2x ESP32 Development Board
 - 1x HC-SR04 (Ultrasonic Sensor)
 - 1x Passive Buzzer
-- Resistors
+- 3x Resistors
+    - 1x 330Ω Resistor
+    - 2x 1000Ω Resistor
 - Breadboard jumper wires
 - Breadboard
 
@@ -24,3 +26,17 @@ when they away from the alarm itself.
 
 ## Wire Diagram
 ![Wire Diagram](docs/images/wire-diagram.JPG)
+
+## Wire Diagram Explaination
+
+•PLEASE NOTE, THE PINS ON THE DIAGRAM ARE DIFFERNT THAN THE SCRIPS. CHANGE THE PIN 
+DEFINTIONS IN THE SCRIPTS ACCORDINGLY*
+
+The HC-SR04 (Ultrasonic Sensor) requires 5v to function, fortunately the ESP32 board 
+has a 5v output. Issue is the ESP32 works on 3.3v logic, meaning when trying to send 
+5v back to the ESP32 (via the echo pin) the board can't understand it. I worked around 
+this issue by creating a potential divder circuit, so the voltage is dropped from 5v 
+to 3.3v.
+
+The rest of the diagram is pretty self explaintory, should be able to replicate with
+yourself by following the diagram.
