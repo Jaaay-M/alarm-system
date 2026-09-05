@@ -29,7 +29,7 @@ when they away from the alarm itself.
 
 ## Wire Diagram Explaination
 
-### PLEASE NOTE, THE PINS ON THE DIAGRAM ARE DIFFERNT THAN THE SCRIPS. CHANGE THE PIN DEFINTIONS IN THE SCRIPTS ACCORDINGLY
+### *PLEASE NOTE, THE PINS ON THE DIAGRAM ARE DIFFERNT THAN THE SCRIPS. CHANGE THE PIN DEFINTIONS IN THE SCRIPTS ACCORDINGLY *
 
 The HC-SR04 (Ultrasonic Sensor) requires 5v to function, fortunately the ESP32 board 
 has a 5v output. Issue is the ESP32 works on 3.3v logic, meaning when trying to send 
