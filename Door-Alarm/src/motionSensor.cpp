@@ -36,6 +36,7 @@ void motionSensorPulse() {
     }
 
     // Calculate the distance in centimetres
+        // The speed of sound is 343 m/s, which is 0.034 cm/µs
     distance = duration * 0.034 / 2;
 
     // Print the distance on the Serial Monitor
