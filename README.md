@@ -39,3 +39,16 @@ to 3.3v.
 
 The rest of the diagram is pretty self explaintory, should be able to replicate with
 yourself by following the diagram.
+
+## Missing folders
+
+### Web Server
+A library that is mentioned under 'main.cpp' but not stored in this repository is 
+'hidden.h'. This file contains the SSID and Password for your network, obviously for 
+secruity reasons I kept this file from my reposistory. It is important though that you 
+replicate this folder in your own clones.
+
+### Door Alarm
+Also same for Door Alarm section, another 'hidden.h' and 'hidden.cpp' files contains the
+mac address for the web-server ESP32 which is used in the 'bluetooth.cpp' folder. Once 
+again when cloning this repository ensure you replicate these files.
